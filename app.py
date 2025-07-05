@@ -23,8 +23,15 @@ menu = st.sidebar.radio("Pilih Menu", ["Klasifikasi Diabetes", "Clustering Gerai
 
 # Halaman Klasifikasi
 if menu == "Klasifikasi Diabetes":
-    st.title("Klasifikasi Diabetes - Model.pkl")
-    st.write("Aplikasi ini memprediksi kemungkinan diabetes menggunakan model yang sudah dilatih.")
+    st.title("Klasifikasi Diabetes ")
+    st.write("## Tentang Aplikasi
+
+Aplikasi ini dikembangkan untuk membantu memprediksi kemungkinan seseorang menderita diabetes berdasarkan beberapa parameter kesehatan. Dengan memanfaatkan algoritma K-Nearest Neighbors (KNN), aplikasi ini dapat memproses data seperti kadar glukosa, tekanan darah, indeks massa tubuh, usia, dan faktor keturunan untuk menghasilkan prediksi.
+
+Model ini dibangun berdasarkan dataset diabetes Pima Indian yang sering digunakan untuk riset dan pembelajaran klasifikasi kesehatan.
+
+Catatan: Prediksi ini bersifat simulasi untuk edukasi dan tidak dapat dijadikan sebagai diagnosis medis resmi.
+")
 
     X = diabetes_df.drop('Outcome', axis=1)
     y = diabetes_df['Outcome']
